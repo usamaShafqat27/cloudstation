@@ -1,0 +1,8 @@
+<h1><%= @channel.name %></h1>
+
+<div id="room" data-room-id="room-<%= @channel.id %>" >
+  <% @stream.size.times do |i| %>
+    <%= render "messages/message", message: @messages[i], stream: @stream[i] %>
+  <% end %>
+</div>
+<%= render "messages/form", message: @message, channel: @channel %>

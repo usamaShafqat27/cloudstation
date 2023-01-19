@@ -1,0 +1,67 @@
+<div class="container login-main-container"  style="display:flex; justify-content:center; align-items:center; height:100%; max-width:100% !important">
+  <div style="height:75vh;padding:2rem; background-color:white; border-radius:0.5rem">
+    <h1 style="text-align:center">Register</h1>
+    <br>
+    <%= form_with(model: @user, local: true) do |form| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div style="margin-top:2rem" ></div>
+      <div class="mb-2 lgn-form-field-container">
+        <div>
+          <%= form.label :username , class: 'form-label' %>
+          <%= form.text_field :username, class: 'form-control lgn-form-input' %>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <div>
+          <%= form.label :password , class: 'form-label' %>
+          <%= form.password_field :password, class: 'form-control lgn-form-input' %>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <div>
+          <%= form.label :firstname, class: 'form-label'  %>
+          <%= form.text_field :firstname, class: 'form-control lgn-form-input' %>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <div>
+          <%= form.label :lastname, class: 'form-label'  %>
+          <%= form.text_field :lastname, class: 'form-control lgn-form-input' %>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <div>
+          <%= form.label :city , class: 'form-label'  %>
+          <%= form.text_field :city, class: 'form-control lgn-form-input' %>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <div>
+          <%= form.label :country , class: 'form-label'  %>
+          <%= form.text_field :country, class: 'form-control lgn-form-input' %>
+        </div>
+      </div>
+
+      <div class="actions d-flex" style="justify-content:center">
+        <%= form.submit class: 'btn btn-primary primary-btn btn-25' %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

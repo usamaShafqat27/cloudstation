@@ -1,0 +1,11 @@
+<li class="list-group-item">
+  <%= link_to channel_path(channel.id), remote: true do %>
+    <div data-channel-id="channel-<%= channel.name %>">
+      <p><%= channel.name %></p>
+      <div class="d-flex w-100">
+        <em class="text-muted w-100" data-new-msgs="0"><%= channel.last_message&.message || 'No messages' %></em>
+        <span class="badge bg-primary rounded-pill"></span>
+      </div>
+    </div>
+  <% end %>
+</li>

@@ -1,0 +1,9 @@
+<div class="card mb-2" id="<%= message.id %>">
+  <div class="card-body">
+    <h5 class="card-title text-muted">
+      <%= message.user_id %>
+      <small>- <%= time_ago_in_words Time.at(message.id.split(':').last.split('-').first.to_i/1000) rescue '' %> ago</small>
+    </h5>
+    <div class="card-text lead mb-2"><%= message.message %></div>
+  </div>
+</div>

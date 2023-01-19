@@ -1,0 +1,31 @@
+<div class="container login-main-container" style="display:flex; justify-content:center; align-items:center; height:100%; max-width:100% !important">
+
+  <div style="height:65vh;padding:2rem; background-color:white; border-radius:0.5rem">
+    <h2 style="text-align:center" >Log in</h2>
+
+    <div style="margin-top:4rem" ></div>
+    <%= form_with(url: sessions_path) do |f| %>
+      <div class="field my-1 lgn-form-field-container">
+        <div>
+          <%= f.label :username %><br />
+          <%= f.text_field :username, { autofocus: true, autocomplete: "username", class: 'form-control lgn-form-input' } %>
+        </div>
+      </div>
+
+      <div class="field my-1 lgn-form-field-container">
+        <div>
+          <%= f.label :password %><br />
+          <%= f.password_field :password, { autocomplete: "current-password", class: 'form-control lgn-form-input' } %>
+        </div>
+      </div>
+
+      <div class="actions my-1 d-flex" style="justify-content:center">
+        <div>
+          <%= f.submit "Log in", class: 'btn btn-primary primary-btn btn-25' %>
+          <br />
+          <%= link_to 'Register', new_user_path, class: 'btn btn-primary secondary-btn btn-25' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

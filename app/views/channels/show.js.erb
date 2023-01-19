@@ -1,0 +1,19 @@
+var renderChannel = () => {
+  const html = "<%= j raw @html %>";
+  const room = document.querySelector("#channel");
+  room.innerHTML = html;
+  const last_message = document.querySelector('#room .card:last-child');
+  if (last_message) last_message.scrollIntoView({behavior: 'smooth'});
+  const channelItem = document.querySelector('[data-channel-id="channel-<%= @channel.id %>"]');
+  if (channelItem){
+    const em = channelItem.querySelector('em');
+    if (em){
+      em.dataset.newMsgs = 0;
+      const badge = channelItem.querySelector('.badge');
+      if (badge){
+        badge.textContent = ''
+      }
+    }
+  }
+}
+renderChannel();

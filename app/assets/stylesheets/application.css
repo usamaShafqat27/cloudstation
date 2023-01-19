@@ -1,0 +1,206 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap-icons/font/bootstrap-icons.css';
+
+#channel {
+  height: 80vh;
+}
+
+#room {
+  height: 75vh;
+  overflow-y: auto;
+}
+
+.channels a {
+  text-decoration: none;
+  color: black;
+}
+
+.channels p {
+  margin-bottom: 0.5rem;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Sofia Pro', sans-serif;
+  background-color: #0D1219;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+#channel-list {
+  height: 80%;
+  overflow-y: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.profile-icon:hover {
+  cursor: pointer;
+}
+
+.user-profile-label {
+  margin-bottom:1rem
+}
+
+.nv-custom {
+  background-color: #1B2330 !important;
+}
+
+.secondary-btn {
+  background-color:#192D3E;
+  border-color:#192D3E;
+}
+
+.primary-btn {
+  background-color:#61DAFB;
+  border-color:#61DAFB;
+  color:#121212
+}
+
+.secondary-btn:hover {
+  background-color:#192D3E;
+  border-color:#192D3E;
+}
+
+.primary-btn:hover {
+  background-color:#61DAFB;
+  border-color:#61DAFB;
+  color:#121212
+}
+
+
+.secondary-btn:active {
+  background-color:#192D3E;
+  border-color:#192D3E;
+}
+
+.primary-btn:active {
+  background-color:#61DAFB;
+  border-color:#61DAFB;
+  color:#121212
+}
+
+.secondary-btn:focus {
+  border-color:#192D3E;
+  background-color:#192D3E;
+}
+
+.primary-btn:active:focus {
+  border-color:#61DAFB;
+  box-shadow: 0 0 0 0.25rem rgb(97 218 251 / 40%);
+}
+
+.primary-btn:focus {
+  border-color:#61DAFB;
+  background-color:#61DAFB;
+  box-shadow: 0 0 0 0.25rem rgb(97 218 251 / 40%);
+}
+
+.secondary-btn:disabled {
+  background-color:#192D3E;
+  border-color:#192D3E;
+}
+
+.primary-btn:disabled {
+  background-color:rgb(97, 218, 251, 0.9);;
+  /* border-color:#353e4c; */
+  /* color:white */
+}
+
+
+.lgn-form-field-container {
+  display: flex;
+  justify-content: center;
+}
+
+.lgn-form-input {
+  width:25rem;
+}
+
+.lgn-form-input:focus {
+  border:#61DAFB;
+  box-shadow: 0 0 0 0.25rem rgb(97 218 251 / 40%);
+}
+
+.btn-25{
+  width: 25rem;
+  margin-top: 1rem;
+}
+
+.login-main-container {
+  background: linear-gradient(to right, #1b2330 0%, rgb(13, 17, 24) 100%)
+}
+
+.list-group-item {
+  background-color: #1B2330;
+}
+
+.list-group-item p {
+  color: white;
+}
+
+.dark-form-input {
+  background-color: #1B2330;
+  color: white;
+  border: 1px solid #353e4c;
+}
+.card-body{
+  background-color: #1B2330;
+  color: white;
+}
+
+.dark-form-input:focus {
+  background-color: #1B2330;
+  color: white;
+  border: 1px solid #353e4c;
+}
+
+.dark-form-input:active {
+  background-color: #1B2330;
+  color: white;
+  border: 1px solid #353e4c;
+}
+
+.card {
+  border:none;
+}
+
+.bg-primary {
+  background-color: #61DAFB !important;
+  line-height: 1.3;
+  color: black;
+}

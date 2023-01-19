@@ -1,0 +1,19 @@
+<% if messages %>
+  <div class="d-flex">
+    <h2 style="color:white" ><%= channel.name %></h2>
+    <div class="ms-auto">
+      <%= form_with url: channel_path(channel), method: :get, local: false do |f| %>
+        <div class="input-group mb-2 d-flex">
+          <%= f.text_field :search, placeholder: 'Search', class: 'form-control dark-form-input', value: params[:search]  %>
+          <%= f.submit 'Search', class: 'btn btn-primary primary-btn', id: "search-button" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="room" data-room-id="room-<%= @channel.id %>" >
+    <% messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+  </div>
+  <%= render "messages/form", message: message, channel: channel %>
+<% end %>

@@ -1,0 +1,9 @@
+<%= form_with model: message, url: channel_messages_path(channel), local: false, html: { class: "my-4" } do |form| %>
+  <div class="form-group mb-2 d-flex">
+    <%= form.text_field :message, placeholder: "Enter your message", class: "form-control me-2 dark-form-input " %>
+    <%= form.submit 'Send', class: "btn btn-primary primary-btn" %>
+  </div>
+
+  <div class="actions">
+  </div>
+<% end %>
